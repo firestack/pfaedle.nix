@@ -20,6 +20,9 @@
 
       perSystem = { pkgs, ... }: {
         devshells.default = { };
+
+        packages.default = pkgs.callPackage ./package.nix { src = ./.; };
+		  packages.mbta-gtfs = pkgs.callPackage ./mbta-gtfs.nix {};
       };
     };
 }
