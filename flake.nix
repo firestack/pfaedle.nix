@@ -22,7 +22,8 @@
         devshells.default = { };
 
         packages.default = pkgs.callPackage ./package.nix { src = ./.; };
-		  packages.mbta-gtfs = pkgs.callPackage ./mbta-gtfs.nix {};
+	packages.mbta-gtfs = pkgs.callPackage ./mbta-gtfs.nix {};
+	packages.osm-mass = pkgs.callPackage ./osm.nix {};
       };
     };
 }
